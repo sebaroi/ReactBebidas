@@ -1,0 +1,103 @@
+.linea {
+    display: inline-block; }
+    
+    
+    .row {
+    text-align: center;
+    font-family: Roboto;
+    width: 100%; }
+    
+    .colorBodys {
+    color: #F5F5F5; }
+    
+    .lineaFooters {
+    color: #b78c33; }
+    
+    
+    footer.nb-footer {
+    background: #39393a;
+    border-top: 4px solid #b78c33;
+    text-align: center; }
+    
+    .footer-info-single img {
+    margin-left: 5px; }
+    
+    .footer-info-single ul li {
+    text-decoration: none;
+    list-style: none;
+    text-align: center; }
+    
+    .footer.nb-footer .footer-info-single {
+    margin-top: 5px; }
+    
+    footer.nb-footer .footer-info-single .title {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-left: 5px; }
+    
+    footer.nb-footer .footer-info-single ul li a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 2px 0;
+    text-decoration: none;
+    list-style: none; }
+    
+    footer.nb-footer .footer-info-single ul li p {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 2px 0; }
+    
+    footer.nb-footer .footer-info-single ul li a:hover {
+    color: #b78c33; }
+    
+    footer.nb-footer .d-flex {
+    text-align: center; }
+    
+    .textoFooter {
+    text-align: center; }
+    
+    .ContenedorRedesSociales {
+    width: 100%;
+    height: 1rem; }
+    
+    /* link redes sociales en el footer */
+    .redesSociales img {
+    margin-top: 0px;
+    padding-left: auto;
+    height: 30px;
+    width: 30px; }
+    
+    .contenedorLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; }
+    
+    .margenFooter {
+    margin-bottom: 70px;
+    background-color: #39393a; }
+    
+    
+    
+    
+    
+    /* MEDIA QUERIES */
+    @media screen and (max-width: 576px) {
+    .marcoProducto {
+    height: fit-content; } }
+    
+    @media screen and (max-width: 1100px) {
+    .form-outline {
+    display: none; }
+    .input-group {
+    display: none; } }
+
+
+
+    .suscribite {
+        color:  white;
+    }
