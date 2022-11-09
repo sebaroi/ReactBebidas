@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NatBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const ItemListContainer = () => {

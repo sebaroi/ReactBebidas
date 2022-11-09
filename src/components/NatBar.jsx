@@ -1,11 +1,13 @@
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Nav, button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import FormSearch from './FormSearch';
 import Secciones from './Secciones';
 import CartWidget from './CartWidget';
 import logoRash from '../components/imagenes/logoChico1.png';
 import navBar from './styles/navBar.css';
+import { Navbar, Container, Nav, button} from 'react-bootstrap';
+
 
 
 
@@ -30,7 +32,6 @@ function NatBar({greeting}) {
             <div>
               <CartWidget />
             </div>
-           
             <FormSearch busqueda='Buscar Producto' TextoBoton='Buscar'/>
           </div>
         </div>
