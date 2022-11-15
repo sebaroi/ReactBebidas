@@ -4,6 +4,7 @@ import FormSearch from "../components/FormSearch";
 import logoRash from '../components/imagenes/logoChico1.png';
 
 
+
 const Footer = () => {
   return (
     <div>

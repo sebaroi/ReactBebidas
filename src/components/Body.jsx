@@ -2,10 +2,12 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './styles/body.css';
-import placaVideo from './imagenes/placaVideo.webp'
+import placaVideo from './imagenes/placaVideo.webp';
+import ItemCount from '../components/ItemCount';
 
 function body () {
   return (
+     
     <Card className='cardProducto' style={{ width: '18rem' }}>
       <Card.Img variant="top" src={placaVideo} />
       <Card.Body>
@@ -17,7 +19,9 @@ function body () {
         Frecuencia boost del núcleo de 1830MHz.
         Resolución máxima: 7680x4320.
         </Card.Text>
-        <Button className='descripcion' variant="primary">DESCRIPCION</Button>
+        <Button className='descripcion' variant="primary">DESCRIPCION</Button> 
+        <div>        <ItemCount/></div>
+ 
       </Card.Body>
     </Card>
   );
