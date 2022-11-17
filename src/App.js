@@ -6,13 +6,12 @@ import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import {faFontAwesomeIcon} from '@fortawesome/free-solid-svg-icons';
 import "./App.css";
-import Body from './components/Body';
+import Item from './components/Item';
 
 function App() {
   return (
     <div className="App">
       <ItemListContainer />
-      <Body />
       <Footer />
     </div>
   );
