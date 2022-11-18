@@ -1,5 +1,13 @@
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cardProducto {
     margin: 10px;
+    height: 350px;
+    width: 300px;
 }
 
 .descripcion {
@@ -16,11 +24,65 @@
     justify-content: center; */
 }
 
+.cardProducto.card{
+    height: 320px;
+    width: 250px;
+    cursor: default;
+    transition: all 400ms ease;
+    border: 1px #a09f9f solid;
+    border-radius: 15px;
+   /*  box-shadow: 1px 1px 5px #464545; */
+}
+
+.cardProducto.card:hover{
+    box-shadow: 5px 5px 20px black;
+    transform: translateY(-3%);
+}
+
 .contenedorImagenCards{
-    height: 250px ;
+    height: 200px ;
     width: 100%;
-    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card-img-top{
+    margin-top: 5px;
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+/* .imgCard{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+} */
+
+/* .contenedorImagenCards img{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+} */
+
+.cardProduct_conten{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.precio{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.titulo{
+    font-size: small;
+/*     font-weight: bolder; */
+}
+
+precio.card-text{
+    font-size: x-large;
+    font-weight: bolder; 
 }

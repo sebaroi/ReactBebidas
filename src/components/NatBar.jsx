@@ -21,13 +21,19 @@ function NatBar() {
               alt='logo de Rash' />
           </div> </a>
           <div className="collapse navbar-collapse">
+            <div >
+            <FormSearch busqueda='Buscar Producto' TextoBoton='Buscar'/>
             <ul className="navbar-nav me-auto">
               <Secciones />
             </ul>
+            </div>
+
+{/*             <ul className="navbar-nav me-auto">
+              <Secciones />
+            </ul> */}
             <div>
               <CartWidget />
             </div>
-            <FormSearch busqueda='Buscar Producto' TextoBoton='Buscar'/>
           </div>
         </div>
       </nav>

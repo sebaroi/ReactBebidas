@@ -1,3 +1,13 @@
 .greet {
     color: white;
 }
+
+.formNatvar{
+    min-width: 500px;
+}
+
+.collapse.navbar-collapse{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

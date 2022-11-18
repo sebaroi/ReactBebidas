@@ -9,23 +9,28 @@ const Item = ({ product }) => {
 /* console.log(props) */
 
   return (
-
-    <Card className='cardProducto'  style={{ width: '18rem' }}>
+    <div className='conteiner '>
+      <div class="row g-3 w-100">
+<div className='col-lg-3 col-md-4 col-sm-6'>
+    <Card className='cardProducto'  >
       <div className='contenedorImagenCards'> 
-        <Card.Img variant="top" src={product.imageProd} />
+        <Card.Img className='imgcard' variant="top" src={product.imageProd} />
       </div>
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
-        <Card.Text>
-        {product.description}
+      <Card.Text className='precio'> 
+          ${product.price}- 
         </Card.Text>
-        <Button className='descripcion' variant="primary">DESCRIPCION</Button> 
-        {product.price}
-        <div>        <ItemCount/></div>
+        <Card.Title className='titulo'>{product.name}</Card.Title>
+
+  
+        
+       {/*  <div>        <ItemCount/></div> ESTO LO VOY A USAR EN LA DFESCRIPPCION */}
  
       </Card.Body>
     </Card>
-
+    </div>
+    </div>
+    </div>
   );
 }
 
