@@ -1,4 +1,4 @@
-import secciones from './styles/secciones.css';
+import './styles/secciones.css';
 const Secciones = () => {
     return (
         <>

@@ -11,6 +11,7 @@ import Item from './components/Item';
 function App() {
   return (
     <div className="App">
+      <NatBar />
       <ItemListContainer />
       <Footer />
     </div>

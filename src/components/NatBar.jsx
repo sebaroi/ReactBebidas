@@ -1,6 +1,4 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import FormSearch from './FormSearch';
 import Secciones from './Secciones';
 import CartWidget from './CartWidget';
@@ -11,7 +9,7 @@ import { Navbar, Container, Nav, button} from 'react-bootstrap';
 
 
 
-function NatBar({greeting}) {
+function NatBar() {
   return (
     <div>
       <nav className="banner navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,9 +24,6 @@ function NatBar({greeting}) {
             <ul className="navbar-nav me-auto">
               <Secciones />
             </ul>
-            <div className="greet">
-            <p>{greeting}</p>
-            </div>
             <div>
               <CartWidget />
             </div>

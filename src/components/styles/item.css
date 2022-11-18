@@ -1,0 +1,26 @@
+.cardProducto {
+    margin: 10px;
+}
+
+.descripcion {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardProduct_conten{
+    display: flex;
+    flex-wrap: wrap;
+/*     text-align: center;
+    justify-content: center; */
+}
+
+.contenedorImagenCards{
+    height: 250px ;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
