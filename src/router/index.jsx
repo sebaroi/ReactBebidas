@@ -1,7 +1,8 @@
 import {createBrowserRouter} from 'react-router-dom';
 import App from '../App';
-import Category from '../components/views/category';
-import Promociones from '../components/views/promociones';
+import Category from '../views/category';
+import Promociones from '../views/promociones';
+import Item from '../components/Item';
 
 
 export const router = createBrowserRouter([
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
         path: "/Promociones/:id",
         element: <Promociones />,
     },
+    {
+        path: "/item/:id",
+        element: <Item />,
+    }
 
 
 ])

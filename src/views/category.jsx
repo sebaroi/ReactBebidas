@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import {Layout} from '../Layout';
 import { useParams } from 'react-router-dom';
 import productos from '../mocks/Products';
@@ -21,5 +21,26 @@ const CategoryView = () => {
         </div>
     );
 }
+
+export default CategoryView;
+ */
+
+
+import { useParams } from "react-router-dom";
+import ItemListContainer from "../components/ItemListContainer";
+import { Layout } from "../components/Layout";
+
+
+const CategoryView = () => {
+//const { category } = useParams();
+  // const categories = item.filter((product) => product.category === category);
+  const { category } = useParams();
+
+return (
+    <Layout>
+        <ItemListContainer />
+    </Layout>
+);
+};
 
 export default CategoryView;

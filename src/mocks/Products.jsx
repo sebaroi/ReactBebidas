@@ -1,6 +1,5 @@
 
-
-  const productos = [
+  export const productos = [
     {
       id:"1",
       name: "Gin Merle London Dry 750ml",
@@ -67,6 +66,6 @@
 ]
 
 
-export default productos;
+//export default productos;
 
 
