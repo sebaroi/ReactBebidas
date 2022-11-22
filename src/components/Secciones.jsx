@@ -1,32 +1,31 @@
+import { Link } from 'react-router-dom';
 import './styles/secciones.css';
 const Secciones = () => {
     return (
         <>
           <li className="nav-item">
-          <a className="nav-link " href="#">PROMOCIONES
-          </a>
+          <Link to='/promociones/123' className="nav-link " href="#">PROMOCIONES </Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">VINOS</a>
+          <Link to='/category/vinos' className="nav-link" href="#">VINOS</Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">CERVEZAS</a>
+          <Link to='/category/cervezas' className="nav-link" href="#">CERVEZAS</Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">APERITIVOS</a>
+          <Link to='/category/aperitivos' className="nav-link" href="#">APERITIVOS</Link>
           </li>  
           <li className="nav-item">
-          <a className="nav-link " href="#">WISKIES
-          </a>
+          <Link to='/category/wiskies' className="nav-link " href="#">WISKIES </Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">GIN</a>
+          <Link to='/category/gin' className="nav-link" href="#">GIN</Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">VODKA</a>
+          <Link to='/category/vodka' className="nav-link" href="#">VODKA</Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="#">LICORES</a>
+          <Link to='/category/licores' className="nav-link" href="#">LICORES</Link>
           </li>  
         </>
     );
