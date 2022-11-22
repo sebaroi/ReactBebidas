@@ -8,7 +8,6 @@ import './styles/carrito.css';
 const CartWidget = () => {
     return (
         <div>
-
             <Button variant="primary" className='carrito'>
             <FontAwesomeIcon icon={faCartShopping} />    
             </Button>{' '} 

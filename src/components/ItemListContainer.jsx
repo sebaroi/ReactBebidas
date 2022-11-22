@@ -1,9 +1,8 @@
+import { useState } from 'react';
 import React from 'react';
-import productos from './Products';
+import productos from './mocks/Products';
 import Loader from './Loader';
 import ItemList from './ItemList';
-import { useState } from 'react';
-
 
 
 

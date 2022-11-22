@@ -2,18 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FormSearch from './FormSearch';
 import Secciones from './Secciones';
 import CartWidget from './CartWidget';
-import logoRash from '../components/imagenes/logoChico1.png';
+import logoRash from '../components/imagenes/logoNeon.png';
 import navBar from './styles/navBar.css';
 import { Navbar, Container, Nav, button} from 'react-bootstrap';
 
 
 
 
-function NatBar() {
+function NavBar() {
   return (
     <div>
       <nav className="banner navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
+        <div className="container-fluid color">
           <a className="navbar-brand" href="#"> 
           <div className='logoRash'>
             <img 
@@ -41,4 +41,4 @@ function NatBar() {
   );
 }
 
-export default NatBar;
+export default NavBar;

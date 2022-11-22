@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/styles/footer.css";
 import FormSearch from "../components/FormSearch";
-import logoRash from '../components/imagenes/logoChico1.png';
+import logoRash from '../components/imagenes/logoNeon.png';
 
 
 
