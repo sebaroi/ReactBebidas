@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemDetail = () => {
+const ItemDetail = ({item}) => {
     return (
         <div>
             <section className="cardProduct datails">
@@ -23,7 +23,7 @@ const ItemDetail = () => {
         </div>
         <div className="productItem">
           <div className="card_price">
-            <CantCart />
+            {/* <CantCart /> */}
             <div className="price-conten">
               <p>$</p>
               <p className="price">{`${item.price}`}</p>
@@ -35,4 +35,4 @@ const ItemDetail = () => {
     );
 }
 
-export default ItemDetail;
+export default ItemDetail;
