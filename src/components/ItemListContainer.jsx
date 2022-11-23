@@ -1,39 +1,66 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import productos from '../mocks/Products';
 import Loader from './Loader';
 import ItemList from './ItemList';
-import { useParams} from 'react-router-dom';
-
-
-
+import { useParams } from 'react-router-dom';
+ 
+ 
+ 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
-    const [hasProduct, setHasProduct] = useState(false);
-    const {category} = useParams();
+    const [loading, setLoading] = useState(true);
+    const { category } = useParams();
+ 
+    useEffect(() => {
+        new Promise((resolve) => setTimeout(() => {
+            resolve(productos);
+        }, 2000)
+        ) .then((data) => {
+            if (category){
+                const categories = data.filter (
+                (product) => product.category === category);
+            setProducts(categories);
+            } else {
+                setProducts(data);
+            }
+        });
+    }, [category]);
 
-    if (!category) {
-        const listproduct = new Promise((resolve) => setTimeout(() => { 
-            resolve(productos); }, 2000));
-    
-        listproduct
-            .then((data) => setProducts(data))
-            .then((data) => setHasProduct(!data));
-    } else {
-        const listproduct = new Promise((resolve) => setTimeout(() => { 
-            resolve(productos); }, 2000));
-            listproduct.then((data) =>
+/*         if (!category) {
+            const listproduct = new Promise((resolve) => setTimeout(() => {
+                resolve(productos);
+            }, 2000));
+ 
+            listproduct
+                .then((data) => {
+                    setProducts(data)
+                    setLoading(false)
+                })
+        } else {
+            const listproduct = new Promise((resolve) => setTimeout(() => {
+                resolve(productos);
+            }, 2000));
+            listproduct.then((data) => {
+ 
                 setProducts(data.filter((product) => product.category === category))
+                setLoading(false)
+            }
             );
+        }
+    }, [category]); */
+
+    if (products.length === 0){
+        return <Loader />
     }
 
     return (
         <div className="itemListContainer">
-        {!hasProduct ? ( <Loader/> ) : ( <ItemList products={products}/>)}
-        </div>  
+            {loading ? (<Loader />) : (<ItemList products={products} />)}
+        </div>
     );
 }
-
+ 
 export default ItemListContainer;
 
 

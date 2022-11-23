@@ -1,8 +1,8 @@
 import React from "react";
 import "../components/styles/footer.css";
 import FormSearch from "../components/FormSearch";
-import logoRash from '../components/imagenes/logoNeon.png';
-
+import logo from '../imagenes/logoNeon.png';
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -14,11 +14,11 @@ const Footer = () => {
             <div className="col-md-3 col-sm-6">
               <div className="footer-info-single">
                 <div className="contenedorLogo">
-                  <a href="./principal.html">
+                  <Link  to='/' >
                   <img 
-              src={logoRash} 
-              alt='logo de Rash' />
-                  </a>
+              src={logo} 
+              alt='logo' />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -29,16 +29,16 @@ const Footer = () => {
                 <h2 className="title">INFORMACION</h2>
                 <ul>
                   <li>
-                    <a href="#" />
+                    <a  />
                   </li>
                   <li>
-                    <a href="#">¿Preguntas Frequentes?</a>
+                    <a >¿Preguntas Frequentes?</a>
                   </li>
                   <li>
-                    <a href="#">Formas de pago</a>
+                    <a >Formas de pago</a>
                   </li>
                   <li>
-                    <a href="#">Terminos y Condiciones</a>
+                    <a >Terminos y Condiciones</a>
                   </li>
                 </ul>
               </div>
@@ -47,13 +47,13 @@ const Footer = () => {
               <div className="footer-info-single">
                 <br />
                 <br />
-                <h2 className="title">ACERCA DE RASH</h2>
+                <h2 className="title">ACERCA DE OTRA COPA</h2>
                 <ul>
                   <li>
-                    <a href="#">¿Quienes Somos?</a>
+                    <a >¿Quienes Somos?</a>
                   </li>
                   <li>
-                    <a href="#">Ubicacion</a>
+                    <a >Ubicacion</a>
                   </li>
                 </ul>
               </div>

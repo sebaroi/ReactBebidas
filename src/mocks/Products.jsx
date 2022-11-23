@@ -1,5 +1,5 @@
 
-  export const productos = [
+  const productos = [
     {
       id:"1",
       name: "Gin Merle London Dry 750ml",
@@ -63,9 +63,27 @@
       price: "1890",
       stock: 3,
     },
+    {
+      id:"8",
+      name: "Cerveza Andes Origen Roja lata 473 mL 6 u",
+      category:"Cervezas",
+      description: "Cerveza Andes Origen Roja Vienna Lager roja lata 473 mL x6 u",
+      imageProd: require("../imagenes/cervezas/andesRoja.webp"), 
+      price: "1278",
+      stock: 3,
+    },
+    {
+      id:"9",
+      name: "Cerveza Corona Lager rubia 269 mL 10 u",
+      category:"Cervezas",
+      description: "Cerveza Corona American Adjunct Lager rubia lata 269 mL 10 u",
+      imageProd: require("../imagenes/cervezas/coronax10.webp"), 
+      price: "2539",
+      stock: 3,
+    },
 ]
 
 
-//export default productos;
+export default productos;
 
 
