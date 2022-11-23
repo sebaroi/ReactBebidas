@@ -1,16 +1,16 @@
 import React from 'react';
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({product}) => {
     return (
         <div>
             <section className="cardProduct datails">
         <div className="productItem">
-          <h2 className="title">{item.title}</h2>
-          <p className="category">{item.category}</p>
+          <h2 className="title">{product.title}</h2>
+          <p className="category">{product.category}</p>
         </div>
         <div className="productItem">
           <h2 className="infoTitle">Descripción</h2>
-          <p className="infoText">{item.description}</p>
+          <p className="infoText">{product.description}</p>
         </div>
         <div className="productItem">
           <div className="colors_size">
@@ -26,7 +26,7 @@ const ItemDetail = ({item}) => {
             {/* <CantCart /> */}
             <div className="price-conten">
               <p>$</p>
-              <p className="price">{`${item.price}`}</p>
+              <p className="price">{`${product.price}`}</p>
             </div>
           </div>
         </div>
