@@ -1,17 +1,37 @@
 .greet {
     color: white;
 }
-
+/* body {
+    margin-bottom: 650px;
+    padding: 0px;
+    height: 100%;
+}
+ */
 .formNatvar{
-    min-width: 500px;
+    min-width: 700px;
 }
 
 .collapse.navbar-collapse{
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
 }
 
 .color{
     background-color: black;
 }
+
+.todoancho{
+    align-items: center;
+    display: flex;
+    justify-content:space-around;
+}
+
+.banner{
+    z-index: 3;
+    width:  100%; 
+    position: fixed;
+    top: 0; 
+    
+
+    } 

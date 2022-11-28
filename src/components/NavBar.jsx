@@ -14,16 +14,16 @@ function NavBar() {
   return (
     <div>
       <nav className="banner navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid color">
+        <div className="container-fluid color todoAncho">
           <Link  to='/' className="navbar-brand" > 
           <div className='logoRash'>
             <img 
               src={logo} 
-              alt='logo de Rash' />
+              alt='logo' />
           </div> </Link>
           <div className="collapse navbar-collapse">
             <div >
-            <FormSearch busqueda='Buscar Producto' TextoBoton='Buscar'/>
+            <FormSearch busqueda='Da para tomar.....' TextoBoton='Buscar'/>
             <ul className="navbar-nav me-auto">
               <Secciones />
             </ul>

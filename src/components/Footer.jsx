@@ -5,6 +5,7 @@ import logo from '../imagenes/logoNeon.png';
 import { Link } from "react-router-dom";
 
 
+
 const Footer = () => {
   return (
     <div>
@@ -14,7 +15,7 @@ const Footer = () => {
             <div className="col-md-3 col-sm-6">
               <div className="footer-info-single">
                 <div className="contenedorLogo">
-                  <Link  to='/' >
+                <Link  to='/' >
                   <img 
               src={logo} 
               alt='logo' />
@@ -29,16 +30,16 @@ const Footer = () => {
                 <h2 className="title">INFORMACION</h2>
                 <ul>
                   <li>
-                    <a  />
+                    <a href="#" />
                   </li>
                   <li>
-                    <a >¿Preguntas Frequentes?</a>
+                    <a href="#">¿Preguntas Frequentes?</a>
                   </li>
                   <li>
-                    <a >Formas de pago</a>
+                    <a href="#">Formas de pago</a>
                   </li>
                   <li>
-                    <a >Terminos y Condiciones</a>
+                    <a href="#">Terminos y Condiciones</a>
                   </li>
                 </ul>
               </div>
@@ -50,10 +51,10 @@ const Footer = () => {
                 <h2 className="title">ACERCA DE OTRA COPA</h2>
                 <ul>
                   <li>
-                    <a >¿Quienes Somos?</a>
+                    <a href="#">¿Quienes Somos?</a>
                   </li>
                   <li>
-                    <a >Ubicacion</a>
+                    <a href="#">Ubicacion</a>
                   </li>
                 </ul>
               </div>
@@ -105,3 +106,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

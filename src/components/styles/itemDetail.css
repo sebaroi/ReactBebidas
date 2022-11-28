@@ -1,0 +1,42 @@
+.conteiner{
+margin: 15px;
+margin-top: 130px;
+}
+
+.ContenedorFoto{
+height: 250px;
+width: 100%;
+}
+
+.marcoProducto {
+    background-color: white;
+    height: 430px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+    transition: all 400ms ease;
+    border: 1px #a09f9f solid;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #464545; 
+    cursor: default;}
+
+    .contProducto{
+        display: flex;
+        justify-content: center;
+        height: 450px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .marcoProducto .imgProdu{
+        align-items: center;
+    }
+
+    .interno{
+        margin: 10px;
+    }
+
+    .botonInf{
+        margin-right: 5px;
+    }

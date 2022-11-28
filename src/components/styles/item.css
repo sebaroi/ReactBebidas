@@ -1,3 +1,4 @@
+
 .conteiner{
     display: flex;
     justify-content: center;
@@ -16,12 +17,13 @@
     justify-content: center;
 }
 
+.card-body{
+    text-decoration:none;
+}
 
 .cardProduct_conten{
     display: flex;
     flex-wrap: wrap;
-/*     text-align: center;
-    justify-content: center; */
 }
 
 .cardProducto.card{
@@ -31,7 +33,7 @@
     transition: all 400ms ease;
     border: 1px #a09f9f solid;
     border-radius: 15px;
-   /*  box-shadow: 1px 1px 5px #464545; */
+    box-shadow: 2px 2px 10px #464545;
 }
 
 .cardProducto.card:hover{
@@ -70,6 +72,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 ;
+    padding: 0;
+    margin-top: 130px;
 }
 
 .precio{
@@ -79,10 +84,15 @@
 
 .titulo{
     font-size: small;
-/*     font-weight: bolder; */
 }
 
-precio.card-text{
+.precio.card-text{
     font-size: x-large;
     font-weight: bolder; 
+}
+
+
+.link{
+    text-decoration: none;
+    color: black;
 }

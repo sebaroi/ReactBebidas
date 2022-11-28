@@ -16,13 +16,13 @@ const Secciones = () => {
           <Link to='/category/Aperitivos' className="nav-link">APERITIVOS</Link>
           </li>  
           <li className="nav-item">
-          <Link to='/category/Wiskies' className="nav-link">WISKIES </Link>
+          <Link to='/category/Whisky' className="nav-link">WHISKYS </Link>
           </li>
           <li className="nav-item">
           <Link to='/category/Gin' className="nav-link">GIN</Link>
           </li>
           <li className="nav-item">
-          <Link to='/category/VODKA' className="nav-link">VODKA</Link>
+          <Link to='/category/Vodka' className="nav-link">VODKA</Link>
           </li>
           <li className="nav-item">
           <Link to='/category/Licores' className="nav-link">LICORES</Link>

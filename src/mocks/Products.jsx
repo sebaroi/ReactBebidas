@@ -15,7 +15,7 @@
       category:"Gin",
       description: "Realizado en Inglaterra. 47% de graduación alcohólica.",
       imageProd: require("../imagenes/gin/bombay.webp"), 
-      price: "3500",
+      price: "3.500",
       stock: 5,
     },
     {
@@ -24,7 +24,7 @@
       category:"Gin",
       description: "Estilo Dry Gin.",
       imageProd: require("../imagenes/gin/heracito.webp"), 
-      price: "21500",
+      price: "21.500",
       stock: 3,
     },
     {
@@ -33,7 +33,7 @@
       category:"Gin",
       description: "Estilo Islay Dry. 46% de graduación alcohólica.",
       imageProd: require("../imagenes/gin/botanis.webp"), 
-      price: "21500",
+      price: "2.150",
       stock: 3,
     },
     {
@@ -42,7 +42,7 @@
       category:"Vinos",
       description: "Añejamiento: 12 meses en barrica. Carnes rojas salseadas, Cazuela de legumbres, Platos criollos",
       imageProd: require("../imagenes/vinos/rutini.webp"), 
-      price: "3420",
+      price: "3.420",
       stock: 5,
     },
     {
@@ -51,7 +51,7 @@
       category:"Vinos",
       description: "Con aroma a frutos rojos. Añejamiento: 12 meses en barrica. Carnes rojas, Pastas",
       imageProd: require("../imagenes/vinos/luigiBosca.webp"), 
-      price: "2550",
+      price: "2.550",
       stock: 3,
     },
     {
@@ -60,7 +60,7 @@
       category:"Vinos",
       description: "Graduación alcohólica de 13%",
       imageProd: require("../imagenes/vinos/trumpeter.webp"), 
-      price: "1890",
+      price: "1.890",
       stock: 3,
     },
     {
@@ -69,7 +69,7 @@
       category:"Cervezas",
       description: "Cerveza Andes Origen Roja Vienna Lager roja lata 473 mL x6 u",
       imageProd: require("../imagenes/cervezas/andesRoja.webp"), 
-      price: "1278",
+      price: "1.278",
       stock: 3,
     },
     {
@@ -78,8 +78,44 @@
       category:"Cervezas",
       description: "Cerveza Corona American Adjunct Lager rubia lata 269 mL 10 u",
       imageProd: require("../imagenes/cervezas/coronax10.webp"), 
-      price: "2539",
+      price: "2.539",
       stock: 3,
+    },
+    {
+      id:"10",
+      name: "Whisky Chivas Regal 12 Años Escocia botella 1 L",
+      category:"Whisky",
+      description: "40% de graduación alcohólica.",
+      imageProd: require("../imagenes/whisky/chivas.webp"), 
+      price: "6.480",
+      stock: 13,
+    },
+    {
+      id:"11",
+      name: "Campari Aperitivo 750 Ml Botella",
+      category:"Aperitivos",
+      description: "Gran pareja con jugo de naranja",
+      imageProd: require("../imagenes/aperitivos/campari.webp"), 
+      price: "1.230",
+      stock: 10,
+    },
+    {
+      id:"12",
+      name: "Licor Blue Curacao Cusenier 750 Ml",
+      category:"Licores",
+      description: "Infantable para darle color a tus tragos",
+      imageProd: require("../imagenes/licores/cusenier.webp"), 
+      price: "731",
+      stock: 7,
+    },
+    {
+      id:"13",
+      name: "Vodka Absolut Azul Clasic Importado Original 750 Ml",
+      category:"Vodka",
+      description: "Importado Original 750 Ml",
+      imageProd: require("../imagenes/vodka/vodka.webp"), 
+      price: "3.142",
+      stock: 7,
     },
 ]
 

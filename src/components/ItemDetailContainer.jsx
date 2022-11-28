@@ -1,80 +1,57 @@
-/* import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
+import productos from '../mocks/Products'
 import Loader from "./Loader";
-import PRODUCTOS from "../mocks/products";
+const ItemDetailContainer = () => {
+  const [item, setItem] = useState(null);
+  const { id } = useParams();
 
-const ItemDetailContainer = ({ product }) => {
-  const [item, setItem] = useState([]);
+  useEffect(() => {
+    new Promise((resolve) =>
+      // Simulation of a call to an api
+      setTimeout(() => resolve(productos.find((item) => item.id === id)), 1000)
+    ).then((data) => setItem(data));
+  }, [id]);
+
+  if (!item) {
+    return <Loader />;
+  }
+
+  return (
+    <div className="flex justify-center items-center ">
+      <ItemDetail item={item} />
+    </div>
+  );
+};
+
+export default ItemDetailContainer
+
+/*imp ort React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react'; 
+import ItemDetail from './ItemDetail';
+import productos from './mocks/Products';
+
+
+const ItemDetailContainer = ({products}) => {
+  const [item, setItem]= useState([]);
   const [hasProduct, setHasProduct] = useState(false);
 
   useEffect(() => {
     let details = new Promise((resolve) =>
-      setTimeout(() => resolve(PRODUCTOS[product - 1]), 2000)
+      setTimeout(() => resolve(productos[products - 1]), 2000)
     );
 
     details.then((data) => setItem(data)).then((data) => setHasProduct(!data));
-  }, [product]);
+  }, [products]);
 
+  
   return (
     <div className="itemDetailContainer">
-      {!hasProduct ? <Loader /> : <ItemDetail item={item} />}
+      {!hasProduct ? <Loader /> : <ItemDetail item= { item } />}
     </div>
   );
 };
 
 export default ItemDetailContainer; */
-
-/* import { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
-
-import { item as itemMock } from "../mocks/item.mock";
-
-const ItemDetailContainer = () => {
-const [item, setItem] = useState(null);
-
-useEffect(() => {
-    new Promise((resolve) => setTimeout(() => resolve(itemMock[0]), 2000)).then(
-    (data) => setItem(data)
-    );
-}, []);
-
-if (!item) {
-    return <p>Loading...</p>
-}
-
-return <ItemDetail item={item} />;
-};
-
-export default ItemDetailContainer; */
-
-
-
-import React, { useState, useEffect } from "react";
-import ItemDetail from "./ItemDetail";
-import Loader from "./Loader";
-import productos from "../mocks/Products";
-import { useParams } from "react-router-dom";
-
-const ItemDetailContainer = () => {
-  const [item, setItem] = useState([]);
-  const [hasProduct, setHasProduct] = useState(true);
-  const {id}= useParams()
-
-  useEffect(() => {
-    let details = new Promise((resolve) =>
-      setTimeout(() => resolve(productos))
-    );
-
-    details
-    .then((data) => setItem(data.find((prod)=> prod.id === id)))
-    .finally(()=> setHasProduct(false))
-  }, [id]);
-
-  return (
-    <div className="itemDetailContainer">
-      {hasProduct ? <Loader /> : <ItemDetail item={item} />}
-    </div>
-  );
-};
-
-export default ItemDetailContainer;

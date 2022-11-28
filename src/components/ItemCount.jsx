@@ -1,30 +1,27 @@
-import React from 'react';
-import { useState } from 'react';
-import { Button } from 'react-bootstrap';
-import '../components/styles/contador.css';
+import Button from 'react-bootstrap/Button';
 
-const ItemCount = () => {
-  const [count, setAcount] = useState(0);
-const stock = 5;
-  const decrease = () => {
-    setAcount(count-1);
-  }
-
-  const increase = () => {
-    setAcount(count+1);
-  }
-
+export const ItemCount = ({ count, handleCount }) => {
   return (
-    <div>
-      <div className='contador'>
-        <Button variant="primary">Agregar al carrito</Button>
-        <Button variant="danger" disabled={count <=1} onClick={decrease}> - </Button>
-        <span>{count} </span>
-        <Button variant="danger" disabled={count >=stock} onClick={increase}> + </Button>
-      </div>
+    <div className="flex mt-10 w-4/5 bg-gray-200 rounded">
+      <Button
+        onClick={() => handleCount("minus")}
+        className="flex justify-center items-center p-2 w-2/5 h-full bg-gray-800 text-black"
+      >
+        -
+      </Button>
+      <span
+        id="counter"
+        className="flex flex-1 justify-center items-center mx-4 font-bold"
+      >
+        {count}
+      </span>
+      <Button
+        onClick={() => handleCount("plus")}
+        className="flex justify-center items-center p-2 w-2/5 h-full bg-gray-800 text-black"
+      >
+        +
+      </Button>
     </div>
   );
-}
+};
 
-
-export default ItemCount;

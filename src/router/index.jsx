@@ -4,7 +4,6 @@ import Category from '../views/category';
 import Promociones from '../views/promociones';
 import Item from '../views/item';
 
-
 export const router = createBrowserRouter([
     {
         path: "/",

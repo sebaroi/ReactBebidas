@@ -9,7 +9,7 @@ const CartWidget = () => {
     return (
         <div>
             <Button variant="primary" className='carrito'>
-            <FontAwesomeIcon icon={faCartShopping} />    
+            <FontAwesomeIcon className='carro' icon={faCartShopping} />    
             </Button>{' '} 
         </div>
     );
