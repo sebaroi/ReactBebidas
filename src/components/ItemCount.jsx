@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import  { faPlus}from "@fortawesome/free-solid-svg-icons"
-import  { faMinus}from "@fortawesome/free-solid-svg-icons"
+import  { faPlus }from "@fortawesome/free-solid-svg-icons"
+import  { faMinus }from "@fortawesome/free-solid-svg-icons"
 export const ItemCount = ({ count, handleCount }) => {
   return (
     <div className="flex mt-10 w-4/5 bg-gray-200 rounded">
