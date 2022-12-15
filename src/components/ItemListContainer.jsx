@@ -5,6 +5,7 @@ import Loader from './Loader';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import { getDocs, collection, getFirestore } from 'firebase/firestore';
+import db  from 'firebase/firestore';
 
 
 
@@ -17,7 +18,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const db = getFirestore();
-        const productsCollection = collection(db, 'prodcutos');
+        const productsCollection = collection(db, 'productos');
         getDocs(productsCollection).then ((snapshot) => {
             const products = snapshot.docs.map((doc) => ({
                 id: doc.id, ...doc.data(),
@@ -60,12 +61,12 @@ const ItemListContainer = () => {
             );
         }
     }, [category]); 
-
+*/
     return (
         <div className="itemListContainer">
             {loading ? (<Loader />) : (<ItemList products={products} />)}
         </div>
-    ); */
+    ); 
 }
 
 export default ItemListContainer;

@@ -6,9 +6,11 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './router/index.jsx';
 import { CartContextProvider } from "./context/cartContext";
 
-
-
+//------------FIREBASE----------------------//
 import { initializeApp } from "firebase/app";
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCE4vAzyHqTVhCTM059ZCaj63yxfDZM2L0",
@@ -19,9 +21,9 @@ const firebaseConfig = {
   appId: "1:851654385281:web:56e8338b4bb55888f03780"
 };
 
-
 initializeApp(firebaseConfig);
 
+//---------fIN---FIREBASE----------------------//
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
