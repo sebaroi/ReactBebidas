@@ -7,22 +7,29 @@ import { router } from './router/index.jsx';
 import { CartContextProvider } from "./context/cartContext";
 
 //------------FIREBASE----------------------//
+
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-
-
+/* const firebaseConfig = {
+  apiKey: "AIzaSyDY6aiouWHTJ6jSbfK89JVJ_M1jnLd6YhE",
+  authDomain: "coderreact-5e975.firebaseapp.com",
+  projectId: "coderreact-5e975",
+  storageBucket: "coderreact-5e975.appspot.com",
+  messagingSenderId: "1000962534047",
+  appId: "1:1000962534047:web:92a9ac8655e3d1ac0590aa"
+}; */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCE4vAzyHqTVhCTM059ZCaj63yxfDZM2L0",
-  authDomain: "coder-ecommerce-bebidas.firebaseapp.com",
-  projectId: "coder-ecommerce-bebidas",
-  storageBucket: "coder-ecommerce-bebidas.appspot.com",
-  messagingSenderId: "851654385281",
-  appId: "1:851654385281:web:56e8338b4bb55888f03780"
+  apiKey: "AIzaSyCTGoNZceS-DiqQeP19TbgsGWUqDm2iEwQ",
+  authDomain: "ecommerce-para-coder.firebaseapp.com",
+  projectId: "ecommerce-para-coder",
+  storageBucket: "ecommerce-para-coder.appspot.com",
+  messagingSenderId: "252009161814",
+  appId: "1:252009161814:web:acbe98c803d0ae1efec7f7"
 };
 
 initializeApp(firebaseConfig);
-
 //---------fIN---FIREBASE----------------------//
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

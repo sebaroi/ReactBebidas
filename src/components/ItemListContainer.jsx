@@ -4,8 +4,8 @@ import productos from '../mocks/Products';
 import Loader from './Loader';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import { getDocs, collection, getFirestore } from 'firebase/firestore';
-import db  from 'firebase/firestore';
+import { getDoc, doc, collection, getFirestore } from 'firebase/firestore';
+
 
 
 
@@ -18,13 +18,24 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const db = getFirestore();
-        const productsCollection = collection(db, 'productos');
-        getDocs(productsCollection).then ((snapshot) => {
+        const itemRef = doc(db, "items", "Frb8v20ABDQJSSE1q0D1");
+
+     getDoc(itemRef).then((snapshot) => {
+       if (snapshot.exists()) {
+        //console.log(snapshot.data())
+        console.log([{ id: "Frb8v20ABDQJSSE1q0D1", ...snapshot.data() }]);
+       }
+     });
+     //seba78it
+/*         const productsCollection = collection(db, "productos");
+        getDocs(productsCollection).then((snapshot) => {
             const products = snapshot.docs.map((doc) => ({
-                id: doc.id, ...doc.data(),
+            id: doc.id,
+            ...doc.data(),
             }));
+        
             setProducts(products);
-        });
+        }); */
 
     }, []);
 
@@ -62,10 +73,19 @@ const ItemListContainer = () => {
         }
     }, [category]); 
 */
-    return (
+
+if (products.length === 0) {
+    return <Loader />;
+  }
+
+  return (
+    <div className="itemListContainer">
+      {<ItemList products={products} />}
+    </div>
+/*     return (
         <div className="itemListContainer">
             {loading ? (<Loader />) : (<ItemList products={products} />)}
-        </div>
+        </div> */
     ); 
 }
 
