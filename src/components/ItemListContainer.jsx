@@ -4,7 +4,7 @@ import productos from '../mocks/Products';
 import Loader from './Loader';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import { getDoc, doc, collection, getFirestore } from 'firebase/firestore';
+import {collection, getDocs, getFirestore, limit, query, where } from "firebase/firestore";
 
 
 
@@ -18,13 +18,15 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const db = getFirestore();
-        const itemRef = doc(db, "items", "Frb8v20ABDQJSSE1q0D1");
+        const itemsCollection = collection(db, "items");
 
-     getDoc(itemRef).then((snapshot) => {
-       if (snapshot.exists()) {
-        //console.log(snapshot.data())
-        console.log([{ id: "Frb8v20ABDQJSSE1q0D1", ...snapshot.data() }]);
-       }
+     getDocs(itemsCollection).then((snapshot) => {
+       const products = snapshot.docs.map((doc) => ({
+         id: doc.id,
+         ...doc.data(),
+       }));
+          
+      setProducts(products);
      });
      //seba78it
 /*         const productsCollection = collection(db, "productos");
@@ -80,7 +82,11 @@ if (products.length === 0) {
 
   return (
     <div className="itemListContainer">
-      {<ItemList products={products} />}
+        {<ItemList products={products} />}
+        <div>
+   {/*    {products[1].id} */}
+      
+        </div>
     </div>
 /*     return (
         <div className="itemListContainer">
