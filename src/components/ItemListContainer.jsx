@@ -25,7 +25,7 @@ const ItemListContainer = () => {
          id: doc.id,
          ...doc.data(),
        }));
-          
+          console.log(products)
       setProducts(products);
      });
      //seba78it

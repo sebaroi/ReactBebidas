@@ -21,12 +21,12 @@ import { initializeApp } from "firebase/app";
 }; */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTGoNZceS-DiqQeP19TbgsGWUqDm2iEwQ",
-  authDomain: "ecommerce-para-coder.firebaseapp.com",
-  projectId: "ecommerce-para-coder",
-  storageBucket: "ecommerce-para-coder.appspot.com",
-  messagingSenderId: "252009161814",
-  appId: "1:252009161814:web:acbe98c803d0ae1efec7f7"
+  apiKey: "AIzaSyDY6aiouWHTJ6jSbfK89JVJ_M1jnLd6YhE",
+  authDomain: "coderreact-5e975.firebaseapp.com",
+  projectId: "coderreact-5e975",
+  storageBucket: "coderreact-5e975.appspot.com",
+  messagingSenderId: "1000962534047",
+  appId: "1:1000962534047:web:92a9ac8655e3d1ac0590aa"
 };
 
 initializeApp(firebaseConfig);
