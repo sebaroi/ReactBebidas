@@ -8,6 +8,31 @@
     border-radius: 15px;
 }
 
-.carro{
+.carro {
     font-size:1rem;
+}
+
+.contenedorCarritoVacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+}
+
+
+.fotoCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoCarritoVacio {
+    font-weight: bold;
+    color: gray;
+}
+
+.haceTuCompra{
+    font-weight: bold;
+    margin-left: 5px;
 }

@@ -1,4 +1,4 @@
-
+/* 
   const productos = [
     {
       id:"1",
@@ -8,8 +8,8 @@
       //imageProd: require("../imagenes/gin/merle.webp"),
       price: "1.890",
       stock: 10,
-    },
-    {
+    }, */
+  /*   {
       id:"2",
       name: "Gin Bombay Sapphire London Dry 750 mL",
       category:"Gin",
@@ -123,3 +123,4 @@
 export default productos;
 
 
+ */
