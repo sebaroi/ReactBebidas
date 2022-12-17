@@ -14,7 +14,7 @@ import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "fi
     useEffect(() => {
       // If we have a category in the browser path
       if (category) {
-        const q = query(ref, where("category", '===', category));
+        const q = query(ref, where("category", '==', category));
         getDocs(q).then((result) =>
           setData(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         );
