@@ -40,7 +40,7 @@ import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "fi
       );
   
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [category]);
   
     return data;
   };
