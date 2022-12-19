@@ -9,6 +9,8 @@ import { CartContext } from "../context/cartContext";
 import '../components/styles/carrito.css';
 import Button from 'react-bootstrap/Button';
 import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore";
+import swal from "sweetalert";
+
 
 
 const CartView = () => {
@@ -62,7 +64,7 @@ const CartView = () => {
           .then(() => {
             clear();
             setIsLoading(false);
-            alert("Compra finalizada");
+            swal("Compra finalizada, Pronto le estara llegnado un E-mail");
             navigate("/");
           })
           .catch((err) => console.error(err));
@@ -90,13 +92,35 @@ const CartView = () => {
                 const quantityAdded = product.quantityAdded;
 
                 return (
-                  <div className="relative">
+/*                  <div className=" cardProducto carrito-lito" >
+            <div className="container todo"> 
+             <div className='card-text1'><img src={producto.img} className="card-img" alt={producto.nombre} /></div> 
+            <h5 className="card-title1">{product.item.name}</h5> 
+             <p className='card-text1'>Cantidad: {producto.cantidad}</p> 
+             <p className="card-text1">Precio: $ {product.item.price} </p> 
+          <p className="card-text1">Precio Total: $  {producto.precio * producto.cantidad}</p> 
+         <button >Eliminar Item</button> 
+           <button className='btn btn-dark1' onClick={() => quitarProducto(producto)}>Eliminar Item</button> 
+
+          </div>                       
+          </div>
+******************************************************************************
+  */
+
+         <span >
+          { quantityAdded }
+          { product.item.name }
+          
+          Price: <strong>${ product.item.price }</strong>
+        </span> 
+                  
+/*                   <div className="contenedorFinal">
                     <Item
                       product={product.item}
                       quantityAdded={quantityAdded}
                     />
                     <TrashWidget itemId={product.item.id} />
-                  </div>
+                  </div> */
                 );
               })}
             </div>
@@ -106,12 +130,17 @@ const CartView = () => {
               ) : (
                 <div className="flex flex-col">
                   <span>Total a pagar: ${totalAmount}</span>
-                  <button
+                  <Button
                     onClick={handleFinalizePurchase}
                     className="rounded-lg p-2 bg-gray-800 text-white"
                   >
                     Finalizar Compra
-                  </button>
+                  </Button>
+                  <Button onClick={() => navigate("/")}
+                    className="rounded-lg p-2 bg-gray-800 text-white"
+                  >
+                    Seguir comprando
+                  </Button>
                 </div>
               )}
             </div>

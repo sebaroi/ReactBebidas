@@ -8,6 +8,7 @@ import { CartContext } from "../context/cartContext";
 import './styles/carrito.css';
 
 
+
 const CartWidget = () => {
     const { productsAdded } = useContext(CartContext);
     const count = productsAdded.length;

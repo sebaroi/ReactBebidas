@@ -35,7 +35,19 @@ width: 100%;
     .interno{
         margin: 10px;
     }
-
+/* 
     .botonInf{
+        margin-right: 5px;
+    } */
+
+    .boton1 {
+        margin-right: 5px;
+    }
+
+    .boton2 {
+        margin-right: 5px;
+    }
+
+    .boton3 {
         margin-right: 5px;
     }
