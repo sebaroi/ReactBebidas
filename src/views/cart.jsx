@@ -8,39 +8,44 @@ import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
 import '../components/styles/carrito.css';
 import Button from 'react-bootstrap/Button';
-import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore";
+/* import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore"; */
 import swal from "sweetalert";
 
 
 
 const CartView = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [updatingProducts, setUpdatingProducts] = useState(false);
+/*   const [isLoading, setIsLoading] = useState(false);
+  const [updatingProducts, setUpdatingProducts] = useState(false); */
   const navigate = useNavigate();
 
-  const { productsAdded: items, clear, totalAmount } = useContext(CartContext);
+  const { productsAdded: items, totalAmount } = useContext(CartContext);
 
-  const getTotalByProduct = (quantity, price) => {
+/*   const getTotalByProduct = (quantity, price) => {
     return quantity * price;
+  }; */
+
+
+  const goToCheckout = () => {
+    navigate("/checkout");
   };
 
 
-    const handleFinalizePurchase = () => {
+/*     const handleFinalizePurchase = () => {
     setIsLoading(true);
 
     const total = items
       .map((product) =>
         getTotalByProduct(product.quantityAdded, product.item.price)
       )
-      .reduce((previousValue, currentValue) => previousValue + currentValue);
+      .reduce((previousValue, currentValue) => previousValue + currentValue); */
 
-    const order = {
+/*     const order = {
       buyer: { name: "Jorge", phone: "123", email: "a@asas.com" },
       items,
       total,
-    };
+    }; */
 
-    const db = getFirestore();
+/*     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
 
     addDoc(ordersCollection, order)
@@ -49,9 +54,9 @@ const CartView = () => {
       })
       .catch((err) => console.error({ err }))
       .finally(() => {});
-  };
+  }; */
 
-  useEffect(() => {
+/*   useEffect(() => {
     if (updatingProducts) {
       const db = getFirestore();
 
@@ -72,7 +77,7 @@ const CartView = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [updatingProducts]);
-
+ */
   return (
     <Layout>
       <div className="contenedorCarritoVacio">
@@ -87,51 +92,31 @@ const CartView = () => {
 
         ) : (
           <div>
-            <div className="flex gap-4">
+            <div className=" productosCarrito flex gap-4" >
               {items.map((product) => {
                 const quantityAdded = product.quantityAdded;
 
                 return (
-/*                  <div className=" cardProducto carrito-lito" >
-            <div className="container todo"> 
-             <div className='card-text1'><img src={producto.img} className="card-img" alt={producto.nombre} /></div> 
-            <h5 className="card-title1">{product.item.name}</h5> 
-             <p className='card-text1'>Cantidad: {producto.cantidad}</p> 
-             <p className="card-text1">Precio: $ {product.item.price} </p> 
-          <p className="card-text1">Precio Total: $  {producto.precio * producto.cantidad}</p> 
-         <button >Eliminar Item</button> 
-           <button className='btn btn-dark1' onClick={() => quitarProducto(producto)}>Eliminar Item</button> 
 
-          </div>                       
-          </div>
-******************************************************************************
-  */
-
-         <span >
-          { quantityAdded }
-          { product.item.name }
+         <div className="description">
+          <p className=" carroDescripcion"> { quantityAdded } </p>
+          <p className="carroDescripcion"> { product.item.name } </p>
           
-          Price: <strong>${ product.item.price }</strong>
-        </span> 
+          <p className="carroDescripcion">Price: <strong>${ product.item.price }</strong> </p> 
+          <TrashWidget itemId={product.item.id} />
+        </div> 
                   
-/*                   <div className="contenedorFinal">
-                    <Item
-                      product={product.item}
-                      quantityAdded={quantityAdded}
-                    />
-                    <TrashWidget itemId={product.item.id} />
-                  </div> */
                 );
               })}
             </div>
             <div className="flex justify-end mt-4">
-              {isLoading ? (
+      {/*         {isLoading ? (
                 <Loader size="50px" />
-              ) : (
+              ) : ( */}
                 <div className="flex flex-col">
                   <span>Total a pagar: ${totalAmount}</span>
                   <Button
-                    onClick={handleFinalizePurchase}
+                    onClick={goToCheckout}
                     className="rounded-lg p-2 bg-gray-800 text-white"
                   >
                     Finalizar Compra
@@ -142,7 +127,7 @@ const CartView = () => {
                     Seguir comprando
                   </Button>
                 </div>
-              )}
+          {/*     )} */}
             </div>
           </div>
         )}

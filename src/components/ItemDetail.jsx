@@ -9,10 +9,6 @@ import swal from "sweetalert";
 
 /* poner un sweetalert cuando pone productos */
 
-
-
-
-
 const ItemDetail = ({ item }) => {
   const { addItem, isInCart } = useContext(CartContext);
   const navigate = useNavigate();
@@ -30,6 +26,7 @@ const ItemDetail = ({ item }) => {
     else {
       setCurrentStock(currentStock - count);
       addItem(item, count);
+      swal ('SE AGREGO UN PRODUCTO')
   }
 }
 
@@ -91,24 +88,4 @@ const ItemDetail = ({ item }) => {
 };
 
 export default ItemDetail;
-
-
-
-/* import React from 'react';
-
-const ItemDetail = ({item}) => {
-    return (
-        <div>
-            <div>
-                <h2>Detalle del producto:{item.name}</h2>
-            </div>
-        </div>
-    );
-}
-
-export default ItemDetail;
-
-
-
- */
 
