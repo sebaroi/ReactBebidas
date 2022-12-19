@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Layout } from "../components/Layout";
 import { CartContext } from "../context/cartContext";
-import { Button } from "bootstrap";
+import Button from 'react-bootstrap/Button';
 import swal from "sweetalert";
 
 // firebase
