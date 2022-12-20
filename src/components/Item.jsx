@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './styles/item.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 const Item = ({ product, quantityAdded }) => {
@@ -10,7 +10,7 @@ const Item = ({ product, quantityAdded }) => {
   return (
     <Link className='link' to={`/item/${product.id}`}>
       <div className='conteiner '>
-        <div class="row ">
+        <div className="row ">
           <div className='col-md-8 '>
             <Card className='cardProducto'  >
           <div className='contenedorImagenCards'> 

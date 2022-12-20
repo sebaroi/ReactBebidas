@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import './styles/navBar.css'
+import './styles/navBar.css';
 
 
 const FormSearch = ({busqueda, TextoBoton}) => {

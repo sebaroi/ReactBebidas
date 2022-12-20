@@ -5,7 +5,6 @@ import logo from '../imagenes/logoNeon.png';
 import { Link } from "react-router-dom";
 
 
-
 const Footer = () => {
   return (
     <div>

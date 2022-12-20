@@ -51,7 +51,7 @@
     flex-direction: column;
     align-items: center;
     margin-left: 1rem;
-   margin-right: 1rem;
+    margin-right: 1rem;
 }
 .carrito-lito{
     display: flex;
@@ -63,23 +63,25 @@
     height: 100%;
     align-items: center;
     justify-content: space-between;
-   
 }
+
 .card-img{
     height:100px ;
 }
+
 body{
     padding: 0px;
 }
+
 .card-title1{
     display: flex;
     align-items: center;
 }
+
 .total{
     display: flex;
     flex-direction: column;
-   align-items: center;
-
+    align-items: center;
 }
 
 .todo{
@@ -99,6 +101,39 @@ body{
     justify-content: space-around;
     padding: 5px;
 }
+
 .description p{
     margin: 5px;
+}
+
+.formCompra{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+.formCompra2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.textFormulario{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.marcoFinalCompra{
+    width: 100%;
+}
+
+.boton1{
+    margin-right: 5px;
+}
+
+.boton2{
+    margin-left: 5px;
 }

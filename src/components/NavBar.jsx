@@ -4,10 +4,7 @@ import Secciones from './Secciones';
 import CartWidget from './CartWidget';
 import logo from '../imagenes/logoNeon.png';
 import './styles/navBar.css';
-//import { Navbar, Container, button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-
-
 
 
 function NavBar() {
@@ -28,7 +25,6 @@ function NavBar() {
               <Secciones />
             </ul>
             </div>
-
             <div>
               <CartWidget />
             </div>

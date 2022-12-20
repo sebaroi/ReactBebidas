@@ -4,6 +4,7 @@ import { Layout } from "../components/Layout";
 import { CartContext } from "../context/cartContext";
 import Button from 'react-bootstrap/Button';
 import swal from "sweetalert";
+import '../components/styles/carrito.css';
 
 // firebase
 import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore";
@@ -62,46 +63,50 @@ const CheckoutView = () => {
           .then(() => {
             clear();
             setIsLoading(false);
-            swal("Compra finalizada");
+            swal("COMPRA FINALIZADA, PRONTO TE LLEGARE UN EMAIL, HASTA LA PROXIMA!!!");
             navigate("/");
           })
           .catch((err) => console.error(err));
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [updatingProducts]);
 
   return (
     <Layout>
-      <form onSubmit={handleFinalizePurchase} className="flex flex-col w-1/2">
-        <div className="flex flex-col">
+      <div className="conteiner marcoFinalCompra">
+      <form onSubmit={handleFinalizePurchase}>
+        <div className="formCompra2 ">
+          <div>
+          <p><strong>COMPLETA LOS DATOS PARA FINALIZAR LA COMPRA</strong></p>
+          </div>
           <input
-            className="h-8 pl-4 mb-4 rounded-md"
+            className="textFormulario h-8 pl-4 mb-4 rounded-md"
             placeholder="Nombre Completo"
             required
           />
           <input
-            className="h-8 pl-4 mb-4 rounded-md"
+            className="textFormulario h-8 pl-4 mb-4 rounded-md"
             placeholder="Numero de Telefono"
             type="number"
             required
           />
           <input
-            className="h-8 pl-4 mb-4 rounded-md"
+            className="textFormulario h-8 pl-4 mb-4 rounded-md"
             placeholder="Email"
-            type={"email"}
+            type="email"
             required
           />
             <input
-            className="h-8 pl-4 mb-4 rounded-md"
+            className="textFormulario h-8 pl-4 mb-4 rounded-md"
             placeholder="Direccion"
             type={"Direccion"}
             required
           />
         </div>
-        <span>
+        <div className='col-md-2'></div>
+        <div>
           Total a pagar: <strong>${totalAmount}</strong>
-        </span>
+        </div>
         <Button
           type="submit"
           className="rounded-lg p-2 bg-gray-800 text-white disabled:opacity-50"
@@ -110,6 +115,7 @@ const CheckoutView = () => {
           Finalizar
         </Button>
       </form>
+      </div>
     </Layout>
   );
 };
