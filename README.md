@@ -5,7 +5,7 @@ $ git clone https://github.com/sebaroi/testeoReact.git
 $ npm install
 
 puede visualizar el proyecto derectamente ingresando a este link
-[Otracopa](otracopasebastian.netlify.app)
+[Otracopa](https://otracopasebastian.netlify.app/)
 
  # Tienda Online  por Roizenberg Sebastian
 
