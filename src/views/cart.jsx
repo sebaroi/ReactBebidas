@@ -32,19 +32,25 @@ return (
             {items.map((product) => {
               const quantityAdded = product.quantityAdded;
             return (
-              <div className="description">
-                <p className=" carroDescripcion"> { quantityAdded } </p>
+/*               <div className="conteiner">
+                <div>
+
+                </div>
+
+              </div> */
+               <div className="description">
+                <p className=" carroDescripcion"> Cantidad { quantityAdded } </p>
                 <p className="carroDescripcion"> { product.item.name } </p>
-                <p className="carroDescripcion">Price: <strong>${ product.item.price }</strong> </p> 
+                <p className="carroDescripcion">Precio: <strong>${ product.item.price }</strong> </p> 
                 <TrashWidget itemId={product.item.id} />
-              </div>                
+              </div>               
             );
             })}
             </div>
             <div className="flex justify-end mt-4">
               <div className="flex flex-col">
                 <div>
-                <p>Total a pagar: ${totalAmount}</p>
+                <p>Total a pagar: <strong> ${totalAmount} </strong></p>
                   <Button
                     onClick={() => navigate ("/checkout")}
                     className="boton1"
