@@ -32,13 +32,7 @@ return (
             {items.map((product) => {
               const quantityAdded = product.quantityAdded;
             return (
-/*               <div className="conteiner">
-                <div>
-
-                </div>
-
-              </div> */
-               <div className="description">
+                <div className="description">
                 <p className=" carroDescripcion"> Cantidad { quantityAdded } </p>
                 <p className="carroDescripcion"> { product.item.name } </p>
                 <p className="carroDescripcion">Precio: <strong>${ product.item.price }</strong> </p> 
